@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Node
+node_modules/
+dist/
+.vite/
+*.log
+
+# Editor
+.vscode/
+.idea/
+.DS_Store
+
+# Source data with PII (kept locally only — see spec.md §五 for expected sheets/columns)
+Book1.xlsx
+*.xlsx

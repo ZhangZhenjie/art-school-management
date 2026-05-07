@@ -1,0 +1,17 @@
+[Unit]
+Description=Art School Management API (FastAPI / uvicorn)
+After=network.target
+
+[Service]
+Type=simple
+User=zhenjie
+Group=zhenjie
+WorkingDirectory=/home/zhenjie/art-school-management/backend
+Environment=PATH=/home/zhenjie/art-school-management/backend/.venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+EnvironmentFile=/home/zhenjie/art-school-management/backend/.env
+ExecStart=/home/zhenjie/art-school-management/backend/.venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8000
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

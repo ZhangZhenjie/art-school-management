@@ -1,0 +1,10 @@
+Alembic migrations for art-school-management.
+
+Generate a new revision after model changes:
+    cd backend && alembic revision --autogenerate -m "description"
+
+Apply:
+    cd backend && alembic upgrade head
+
+Note: M1 currently uses Base.metadata.create_all() in app.main lifespan + seed.py
+for first-time setup; switch to alembic-only after schema stabilizes.
